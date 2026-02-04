@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+  --primary:#c47c6d;
+  --text:#5f5f5f;
+  --border:#eee;
+  --bg:#fafafa;
+}
+
+body{
+  font-family:"Poppins", sans-serif;
+  background:#fff;
+  color:var(--text);
+  line-height:1.7;
+}
+
+.container{
+  width:1200px;
+  max-width:92%;
+  margin:auto;
+}
+
+/* HEADER */
+.header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+.logo img{
+  height:90px;                 
+  width:auto;
+  image-rendering:auto;
+  filter:contrast(1.08) saturate(1.05);
+}
+
+
+nav a{
+  margin-left:28px;
+  text-decoration:none;
+  font-weight:500;
+  color:#555;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+/* HERO */
+.hero{
+  padding:100px 0;
+  background:var(--bg);
+}
+
+.hero h1{
+  font-size:64px;             
+  font-weight:600;
+  color:var(--primary);
+  margin-bottom:24px;
+  max-width:1100px;
+  line-height:1.12;
+}
+
+
+
+.hero p{
+  font-size:16px;
+  max-width:760px;
+}
+
+/* Hero arka plan (css klasöründen bir üst klasöre çıkıp assets'e gider) */
+.hero-bg{
+  background:
+    linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+    url("../assets/images/anasayfa-foto.png") center/cover no-repeat;
+}
+
+/* SECTION */
+.section{
+  padding:80px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.section h2{
+  font-size:32px;
+  color:var(--primary);
+  margin-bottom:14px;
+}
+
+.section p{
+  max-width:820px;
+}
+
+/* IMAGE GRID */
+.image-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.image-grid img{
+  width:100%;
+  border-radius:16px;
+  filter:brightness(0.95);
+}
+
+/* Full banner images */
+.banner-img{
+  width:100%;
+  border-radius:16px;
+  display:block;
+}
+
+/* CTA */
+.cta{
+  background:var(--primary);
+  color:#fff;
+  text-align:center;
+  padding:70px 0;
+}
+
+.cta h2{
+  font-size:34px;
+  color:#fff;
+  margin-bottom:12px;
+}
+
+.cta p{
+  opacity:0.95;
+}
+
+.cta a{
+  display:inline-block;
+  margin-top:18px;
+  background:#fff;
+  color:var(--primary);
+  padding:14px 32px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.cta a:hover{ background:#f7f7f7; }
+
+/* Contact */
+.contact-list p{
+  font-size:16px;
+  margin-bottom:14px;
+}
+
+/* FOOTER */
+.footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:28px 0;
+  font-size:14px;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{ padding:70px 0; }
+  .hero h1{ font-size:34px; }
+  .section h2{ font-size:26px; }
+  .image-grid{ grid-template-columns:1fr; }
+  nav a{ margin-left:14px; }
+  .logo img{ height:50px; }
+}
+
+@media (max-width:900px){
+  .logo img{
+    height:64px;
+  }
+}
+
+/* WhatsApp Floating Card */
+.whatsapp-card{
+  position:fixed;
+  left:50%;
+  bottom:32px;
+  transform:translateX(-50%);
+  z-index:999;
+}
+
+.whatsapp-card a{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:#ffffff;
+  padding:14px 20px;
+  border-radius:60px;
+  text-decoration:none;
+  color:#222;
+  box-shadow:0 12px 35px rgba(0,0,0,0.18);
+  border:1px solid #eaeaea;
+  transition:all .3s ease;
+}
+
+.whatsapp-card a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.22);
+}
+
+.whatsapp-card img{
+  width:42px;
+  height:42px;
+}
+
+.whatsapp-card strong{
+  font-size:15px;
+  display:block;
+}
+
+.whatsapp-card span{
+  font-size:13px;
+  color:#666;
+}
+
+@media (max-width:900px){
+  .whatsapp-card{
+    bottom:18px;
+  }
+
+  .whatsapp-card span{
+    display:none; /* mobilde sade */
+  }
+}
+ .contact-list a{
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:500;
+}
+
+.contact-list a:hover{
+  text-decoration:underline;
+}
